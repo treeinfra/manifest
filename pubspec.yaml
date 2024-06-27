@@ -1,9 +1,13 @@
 name: manifest
 description: >-
   A command line tool to generate Dart package manifest from pubspec.yaml.
-version: 1.0.0
+version: 0.1.0
 homepage: https://github.com/treeinfra/manifest
 environment: {sdk: ^3.4.3}
+topics:
+  - gen
+  - manifest
+  - version
 
 dependencies:
   args: ^2.5.0
