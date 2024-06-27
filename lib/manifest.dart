@@ -1,5 +1,6 @@
 import 'package:yaml/yaml.dart';
 
+/// Dart&Flutter pubspec.yaml manifest definitions and helper methods.
 class Manifest {
   const Manifest({
     required this.name,
@@ -13,6 +14,8 @@ class Manifest {
   final String? description;
   final String? homepage;
 
+  /// Parse a [Manifest] object from raw yaml string.
+  /// It will throw error if the format is invalid.
   static Manifest fromYaml(String raw) {
     final yaml = loadYaml(raw) as Map;
     return Manifest(
