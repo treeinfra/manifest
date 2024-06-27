@@ -11,4 +11,5 @@ analyzer:
 # https://dart.dev/tools/linter-rules
 linter:
   rules:
+    prefer_expression_function_bodies: true
     sort_pub_dependencies: true
