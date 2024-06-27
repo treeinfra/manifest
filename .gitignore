@@ -1,0 +1,18 @@
+# Dart dependencies, lockfile and overrides.
+# https://dart.dev/guides/libraries/private-files
+.dart_tool/
+pubspec.lock
+pubspec_overrides.yaml
+
+# Platform specified files.
+.DS_Store
+
+# Code editor setting files.
+.atom/
+.idea/
+.fleet/
+*.iml
+*.ipr
+*.iws
+*.sln
+*.swp
