@@ -1,0 +1,12 @@
+name: manifest_example
+description: An example and the tester for the manifest package.
+version: 1.2.3-pre-4.5 # This version code is for testing.
+environment: {sdk: ^3.4.3}
+publish_to: "none"
+
+dependencies:
+  manifest: {path: ../}
+
+dev_dependencies:
+  lints: ^4.0.0
+  test: ^1.25.7
