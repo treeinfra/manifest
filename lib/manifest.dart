@@ -25,6 +25,20 @@ class Manifest {
       homepage: yaml.peek(['homepage']),
     );
   }
+
+  /// Generate Dart code for the output file.
+  /// The generated code is for the whole file and it contains
+  /// the import of this manifest package.
+  String get gen {
+    final parameters = [
+      "name: '$name'",
+      "version: '$version'",
+      if (description != null) "description: '$description'",
+      if (homepage != null) "homepage: '$homepage'",
+    ];
+    return "import 'package:manifest/manifest.dart';\n\n"
+        'const manifest = Manifest(\n  ${parameters.join(',\n  ')},\n);\n';
+  }
 }
 
 extension MapParser on Map<Object?, Object?> {

@@ -1,1 +1,1 @@
-
+export 'manifest.dart';
