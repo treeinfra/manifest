@@ -4,7 +4,7 @@ import 'package:args/args.dart';
 import 'package:manifest/manifest.dart';
 import 'package:path/path.dart';
 
-void main(List<String> args) {
+void main(List<String> args) async {
   // Process parameters.
   final params = (ArgParser()
         ..addOption('root', abbr: 'r', defaultsTo: '.')
@@ -19,4 +19,7 @@ void main(List<String> args) {
   final output = join(params.option('root')!, params.option('output')!);
   final code = Manifest.fromYaml(File(input).readAsStringSync()).gen;
   File(output).writeAsStringSync(code);
+
+  // Format code after generate.
+  await Process.run('dart', ['format', output]);
 }
