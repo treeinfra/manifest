@@ -1,3 +1,7 @@
+## 0.1.1
+
+- Optimize ci sh.
+
 ## 0.1.0
 
 - Establish basic repo including manifest, testings, and ci.

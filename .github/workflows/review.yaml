@@ -1,4 +1,4 @@
-name: review
+name: review.sh
 
 on:
   push: {branches: ["main", "dev"]}
@@ -10,4 +10,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: dart-lang/setup-dart@v1
-      - run: sh review.sh
+      - run: sh ci/review.sh
